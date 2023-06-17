@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_navigation"
+    app:startDestination="@id/loadFragment">
+
+    <fragment
+        android:id="@+id/loadFragment"
+        android:name="ru.steelwave.unotes.presentation.LoadFragment"
+        android:label="fragment_load"
+        tools:layout="@layout/fragment_load" >
+        <action
+            android:id="@+id/action_loadFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:popUpTo="@id/loadFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="ru.steelwave.unotes.presentation.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="ru.steelwave.unotes.presentation.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ru.steelwave.unotes.presentation.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+</navigation>

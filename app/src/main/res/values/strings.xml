@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Unotes</string>
+    <string name="tv_descr_welcome">С помощью данного веб-сервиса, вы сможете получить только проверенную сообществом информацию, по любому вопросу</string>
+    <string name="login">Войти</string>
+    <string name="registration">Регистрация</string>
+    <string name="enter_username">Введите логин</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="enter_mail">Введите почту</string>
+    <string name="next">Далее</string>
+    <string name="welcome_to_UNotes">Добро пожаловать в UNotes</string>
+    <string name="rules">Вы даете согласие на обработку персональных данных и соглашаетесь с условиями политики конфиденциальности приложения</string>
+    <string name="personal_data">обработку персональных данных</string>
+    <string name="privacy_policy">политики конфиденциальности</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

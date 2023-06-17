@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="corner_button">15dp</dimen>
+    <dimen name="corner_checkbox">2dp</dimen>
+
+</resources>

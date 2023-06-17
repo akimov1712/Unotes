@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.RegistrationFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ssp_semibold"
+        android:gravity="center"
+        android:text="@string/registration"
+        android:layout_marginBottom="75dp"
+        android:textColor="@color/secondary_color"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_login"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:startIconDrawable="@drawable/icon_user">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_login"
+            style="@style/EditTextInTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_username"
+            android:maxLength="15" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_mail"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="25dp"
+        app:startIconDrawable="@drawable/icon_mail"
+        app:layout_constraintBottom_toTopOf="@+id/til_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_mail"
+            style="@style/EditTextInTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_mail"
+            android:inputType="textPassword"
+            android:maxLength="25" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_password"
+        style="@style/TextInputLayoutPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_mail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_password"
+            style="@style/EditTextInTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            android:maxLength="25" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_confirm_password"
+        style="@style/TextInputLayoutPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_confirm_password"
+            style="@style/EditTextInTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            android:maxLength="25" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/cb_confirm_rules"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="30dp"
+        android:button="@drawable/selector_checkbox"
+        app:useMaterialThemeColors="false"
+        app:layout_constraintStart_toStartOf="@+id/til_confirm_password"
+        app:layout_constraintTop_toBottomOf="@+id/til_confirm_password" />
+
+    <TextView
+        android:id="@+id/tv_rules"
+        style="@style/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ssp_regular"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="34dp"
+        android:text="@string/rules"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_confirm_rules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cb_confirm_rules"
+        app:layout_constraintTop_toTopOf="@+id/cb_confirm_rules" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        style="@style/button_fill"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/til_password"
+        app:layout_constraintStart_toStartOf="@+id/til_password"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rules" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
