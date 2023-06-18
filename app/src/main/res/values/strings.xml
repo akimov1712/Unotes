@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Unotes</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tv_descr_welcome">С помощью данного веб-сервиса, вы сможете получить только проверенную сообществом информацию, по любому вопросу</string>
     <string name="login">Войти</string>
     <string name="registration">Регистрация</string>
@@ -11,6 +12,19 @@
     <string name="rules">Вы даете согласие на обработку персональных данных и соглашаетесь с условиями политики конфиденциальности приложения</string>
     <string name="personal_data">обработку персональных данных</string>
     <string name="privacy_policy">политики конфиденциальности</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="what_do_you_do">Чем вы занимаетесь?</string>
+    <string name="information">Информация</string>
+    <string name="photo_profile">Фото профиля</string>
+    <string name="about_self">Расскажите о себе</string>
+    <string-array name="drop_menu_test">
+        <item>Кулинар</item>
+        <item>Повар</item>
+        <item>Геймер</item>
+        <item>Телеведущий</item>
+        <item>Программист</item>
+        <item>Дизайнер</item>
+        <item>Юрист</item>
+        <item>Таксист</item>
+        <item>Шахтер</item>
+    </string-array>
 </resources>

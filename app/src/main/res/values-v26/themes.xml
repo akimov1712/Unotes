@@ -36,6 +36,20 @@
         <item name="hintTextColor">#99001219</item>
     </style>
 
+    <style name="TextInputLayoutDrop" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxStrokeColor">@color/selector_box_stroke_color</item>
+        <item name="boxCornerRadiusTopStart">15dp</item>
+        <item name="boxCornerRadiusBottomStart">15dp</item>
+        <item name="boxCornerRadiusBottomEnd">15dp</item>
+        <item name="boxCornerRadiusTopEnd">15dp</item>
+        <item name="errorTextColor">@color/secondary_color</item>
+        <item name="boxStrokeErrorColor">@color/secondary_color</item>
+        <item name="startIconTint">@color/secondary_color</item>
+        <item name="android:textColorHint">@color/hint_color</item>
+        <item name="hintTextColor">#99001219</item>
+    </style>
+
     <style name="TextInputLayoutPassword" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeWidth">2dp</item>
         <item name="boxStrokeColor">@color/selector_box_stroke_color</item>

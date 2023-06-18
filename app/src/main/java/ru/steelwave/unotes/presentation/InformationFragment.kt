@@ -1,5 +1,7 @@
 package ru.steelwave.unotes.presentation
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -21,6 +23,14 @@ class InformationFragment : Fragment() {
     ): View? {
         _binding = FragmentInformationBinding.inflate(inflater)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        settingView()
+    }
+    private fun settingView() {
+
     }
 
     override fun onDestroyView() {

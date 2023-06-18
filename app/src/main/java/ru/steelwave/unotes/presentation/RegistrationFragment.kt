@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import ru.steelwave.unotes.Const
 import ru.steelwave.unotes.R
 import ru.steelwave.unotes.databinding.FragmentRegistrationBinding
@@ -36,6 +37,9 @@ class RegistrationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         settingView()
+        binding.btnNext.setOnClickListener {
+            findNavController().navigate(RegistrationFragmentDirections.actionRegistrationFragmentToInformationFragment())
+        }
     }
 
     private fun setRules() {

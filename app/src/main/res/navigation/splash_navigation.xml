@@ -32,10 +32,19 @@
         android:id="@+id/registrationFragment"
         android:name="ru.steelwave.unotes.presentation.RegistrationFragment"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" />
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="ru.steelwave.unotes.presentation.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="ru.steelwave.unotes.presentation.InformationFragment"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" />
 </navigation>

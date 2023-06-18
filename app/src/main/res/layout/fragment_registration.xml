@@ -16,12 +16,12 @@
         android:layout_marginBottom="75dp"
         android:textColor="@color/secondary_color"
         android:textSize="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/til_login"
+        app:layout_constraintBottom_toTopOf="@+id/til_proffesion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_login"
+        android:id="@+id/til_proffesion"
         style="@style/TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -63,9 +63,7 @@
             style="@style/EditTextInTIL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_mail"
-            android:inputType="textPassword"
-            android:maxLength="25" />
+            android:hint="@string/enter_mail"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -120,6 +118,7 @@
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_marginTop="30dp"
+        android:layout_marginStart="2dp"
         android:button="@drawable/selector_checkbox"
         app:useMaterialThemeColors="false"
         app:layout_constraintStart_toStartOf="@+id/til_confirm_password"
@@ -141,7 +140,7 @@
         app:layout_constraintTop_toTopOf="@+id/cb_confirm_rules" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_next"
         style="@style/button_fill"
         android:layout_width="0dp"
         android:layout_height="50dp"

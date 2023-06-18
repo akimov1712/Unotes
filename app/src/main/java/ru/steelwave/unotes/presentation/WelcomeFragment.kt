@@ -46,7 +46,7 @@ class WelcomeFragment : Fragment() {
     }
 
     private fun setUnotesColorRed() {
-        val fullText = "Добро пожаловать в UNotes"
+        val fullText = requireContext().getText(R.string.welcome_to_UNotes)
         val highlightedText = "UNotes"
 
         val spannableString = SpannableString(fullText)

@@ -7,16 +7,96 @@
     tools:context=".presentation.InformationFragment">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_information"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ssp_semibold"
         android:gravity="center"
-        android:text="Информация"
+        android:text="@string/information"
+        android:layout_marginBottom="20dp"
         android:textColor="@color/secondary_color"
         android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_avatar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/image_default_avatar"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:text="@string/photo_profile"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/til_proffesion"
+        app:layout_constraintEnd_toEndOf="@+id/til_proffesion"
+        app:layout_constraintStart_toStartOf="@+id/til_proffesion" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_proffesion"
+        style="@style/TextInputLayoutDrop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="15dp"
+        app:endIconDrawable="@drawable/icon_bird"
+        app:endIconTint="@color/secondary_color"
+        app:layout_constraintBottom_toTopOf="@+id/til_about_self"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/et_proffesion"
+            style="@style/EditTextInTIL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/what_do_you_do"
+            app:simpleItems="@array/drop_menu_test" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_about_self"
+        style="@style/TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="200"
+        app:counterTextColor="@color/hint_color"
+        app:helperText="(min 120)"
+        app:helperTextTextColor="@color/hint_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_proffesion"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_about_self"
+            style="@style/EditTextInTIL"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:gravity="top"
+            android:hint="@string/about_self"
+            android:maxLength="200" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

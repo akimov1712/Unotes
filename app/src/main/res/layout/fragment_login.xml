@@ -16,12 +16,12 @@
         android:text="@string/login"
         android:textColor="@color/secondary_color"
         android:textSize="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/til_login"
+        app:layout_constraintBottom_toTopOf="@+id/til_proffesion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_login"
+        android:id="@+id/til_proffesion"
         style="@style/TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/til_login">
+        app:layout_constraintTop_toBottomOf="@+id/til_proffesion">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
