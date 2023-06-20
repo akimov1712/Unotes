@@ -44,7 +44,7 @@
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/informationFragment"
-        android:name="ru.steelwave.unotes.presentation.InformationFragment"
+        android:name="ru.steelwave.unotes.presentation.InformationInRegistrationFragment"
         android:label="fragment_information"
-        tools:layout="@layout/fragment_information" />
+        tools:layout="@layout/fragment_information_in_registration" />
 </navigation>

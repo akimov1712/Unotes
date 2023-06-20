@@ -15,7 +15,7 @@
         android:gravity="center"
         android:text="@string/login"
         android:textColor="@color/secondary_color"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/til_proffesion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

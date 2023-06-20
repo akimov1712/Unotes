@@ -16,15 +16,18 @@
     <string name="information">Информация</string>
     <string name="photo_profile">Фото профиля</string>
     <string name="about_self">Расскажите о себе</string>
-    <string-array name="drop_menu_test">
-        <item>Кулинар</item>
-        <item>Повар</item>
-        <item>Геймер</item>
-        <item>Телеведущий</item>
-        <item>Программист</item>
-        <item>Дизайнер</item>
-        <item>Юрист</item>
-        <item>Таксист</item>
-        <item>Шахтер</item>
-    </string-array>
+    <string name="create_account">Создать аккаунт</string>
+    <string name="account_success_create">Аккаунт успешно создан</string>
+    <string name="account_success_confirm">Аккаунт успешно подтвержден</string>
+    <string name="descr_account_create">Для подтверждения учетной записи перейдите по ссылке, высланной вам на почту</string>
+    <string name="descr_mail_confirm">Для начала использования приложения, войдите в аккаунт</string>
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отмена</string>
+    <string name="you_ready_delete_comment">Вы уверены, что хотите удалить комментарий?</string>
+    <string name="filters">Фильтры</string>
+    <string name="new_notes">Новые заметки</string>
+    <string name="best_notes">Популярные заметки</string>
+    <string name="most_speake_notes">Обсуждаемые заметки</string>
+    <string name="report">Пожаловаться</string>
+    <string name="type_report">Тип нарушения</string>
 </resources>
