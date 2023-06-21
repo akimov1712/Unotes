@@ -1,7 +1,5 @@
-package ru.steelwave.unotes.presentation
+package ru.steelwave.unotes.presentation.splash
 
-import android.content.res.Resources
-import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -9,11 +7,11 @@ import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import ru.steelwave.unotes.R
 import ru.steelwave.unotes.databinding.FragmentWelcomeBinding
+import ru.steelwave.unotes.presentation.WelcomeFragmentDirections
 
 
 class WelcomeFragment : Fragment() {

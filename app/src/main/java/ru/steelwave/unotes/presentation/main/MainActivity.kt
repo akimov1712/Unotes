@@ -1,4 +1,4 @@
-package ru.steelwave.unotes.presentation
+package ru.steelwave.unotes.presentation.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

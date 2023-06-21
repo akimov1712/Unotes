@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Unotes</string>
+    <string name="app_name">UNotes</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tv_descr_welcome">С помощью данного веб-сервиса, вы сможете получить только проверенную сообществом информацию, по любому вопросу</string>
     <string name="login">Войти</string>

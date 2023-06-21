@@ -1,4 +1,4 @@
-package ru.steelwave.unotes.presentation
+package ru.steelwave.unotes.presentation.splash
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ru.steelwave.unotes.R
+import ru.steelwave.unotes.presentation.LoadFragmentDirections
 
 class LoadFragment : Fragment() {
 

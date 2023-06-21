@@ -1,4 +1,4 @@
-package ru.steelwave.unotes.presentation
+package ru.steelwave.unotes.presentation.splash
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

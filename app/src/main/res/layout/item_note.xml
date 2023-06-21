@@ -2,13 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_border"
     android:elevation="1dp"
-    android:layout_margin="10dp">
+    android:layout_margin="16dp"
+    android:paddingBottom="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="170dp"
         android:layout_height="56dp"
         android:layout_margin="16dp"
@@ -31,11 +33,11 @@
             android:id="@+id/tv_lvl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
             android:fontFamily="@font/ssp_semibold"
             android:text="21"
             android:textColor="@color/secondary_color"
             android:textSize="10sp"
-            android:layout_marginStart="2dp"
             app:layout_constraintStart_toEndOf="@+id/tv_username"
             app:layout_constraintTop_toTopOf="@+id/tv_username" />
 
@@ -68,15 +70,200 @@
             android:id="@+id/bnt_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:background="none"
             android:src="@drawable/icon_menu"
-            android:layout_marginEnd="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:id="@+id/tv_badge_count_comments"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:background="@drawable/background_badge"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        android:translationZ="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_comments"
+        app:layout_constraintStart_toEndOf="@+id/iv_comments"
+        app:layout_constraintTop_toTopOf="@+id/iv_comments" />
 
+    <ImageView
+        android:id="@+id/iv_comments"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/icon_comments"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout2" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ssp_regular"
+        android:text="Сегодня, 15:32"
+        android:textColor="@color/color_date"
+        android:textSize="10sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <TextView
+        android:id="@+id/tv_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ssp_bold"
+        android:text="Что ждет серию Far Cry в будущем"
+        android:textColor="@color/main_color"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_date"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+    <TextView
+        android:id="@+id/tv_theme_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ssp_regular"
+        android:text="Игровая индустрия"
+        android:textColor="@color/secondary_color"
+        android:textSize="9sp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_Title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Title" />
+
+    <TextView
+        android:id="@+id/tv_text_note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/ssp_regular"
+        android:text="Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче....."
+        android:textColor="@color/main_color"
+        android:textSize="13sp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_theme_note" />
+
+    <TextView
+        android:id="@+id/tv_invest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ssp_bold"
+        android:text="5 вложений"
+        android:textColor="@color/secondary_color"
+        android:textSize="13sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_text_note"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text_note" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_media"
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_invest" />
+
+    <TextView
+        android:id="@+id/tv_audio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ssp_bold"
+        android:text="1 аудио"
+        android:textColor="@color/secondary_color"
+        android:textSize="13sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_text_note"
+        app:layout_constraintTop_toBottomOf="@+id/rv_media" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_audio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audio" />
+
+    <View
+        android:id="@+id/view"
+        style="@style/SeparateLine"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_audio" />
+
+    <ImageButton
+        android:id="@+id/btn_up"
+        android:layout_width="25dp"
+        android:layout_height="16dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/icon_up"
+        app:layout_constraintBottom_toBottomOf="@+id/pBar_popular"
+        app:layout_constraintStart_toStartOf="@+id/view"/>
+
+    <TextView
+        android:id="@+id/tv_popular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/ssp_regular"
+        android:text="Популярность:"
+        android:textColor="@color/main_color"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_up"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <ProgressBar
+        android:id="@+id/pBar_popular"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="17dp"
+        android:background="@drawable/background_border"
+        android:padding="-1dp"
+        android:progress="24"
+        android:layout_marginTop="3dp"
+        android:layout_marginHorizontal="20dp"
+        android:progressDrawable="@drawable/background_progressbar"
+        app:layout_constraintEnd_toStartOf="@+id/btn_down"
+        app:layout_constraintStart_toEndOf="@+id/btn_up"
+        app:layout_constraintTop_toBottomOf="@+id/tv_popular" />
+
+    <TextView
+        android:id="@+id/tv_percent_popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ssp_regular"
+        android:text="25%"
+        android:textColor="@color/main_color"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/pBar_popular"
+        app:layout_constraintEnd_toEndOf="@+id/pBar_popular"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/pBar_popular"
+        app:layout_constraintTop_toTopOf="@+id/pBar_popular" />
+
+    <ImageButton
+        android:id="@+id/btn_down"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/icon_down"
+        app:layout_constraintBottom_toBottomOf="@+id/pBar_popular"
+        app:layout_constraintEnd_toEndOf="@+id/view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

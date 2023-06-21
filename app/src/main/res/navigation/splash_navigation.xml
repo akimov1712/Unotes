@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loadFragment"
-        android:name="ru.steelwave.unotes.presentation.LoadFragment"
+        android:name="ru.steelwave.unotes.presentation.splash.LoadFragment"
         android:label="fragment_load"
         tools:layout="@layout/fragment_load" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="ru.steelwave.unotes.presentation.WelcomeFragment"
+        android:name="ru.steelwave.unotes.presentation.splash.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="ru.steelwave.unotes.presentation.RegistrationFragment"
+        android:name="ru.steelwave.unotes.presentation.splash.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" >
         <action
@@ -39,12 +39,12 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="ru.steelwave.unotes.presentation.LoginFragment"
+        android:name="ru.steelwave.unotes.presentation.splash.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
     <fragment
         android:id="@+id/informationFragment"
-        android:name="ru.steelwave.unotes.presentation.InformationInRegistrationFragment"
+        android:name="ru.steelwave.unotes.presentation.splash.InformationInRegistrationFragment"
         android:label="fragment_information"
         tools:layout="@layout/fragment_information_in_registration" />
 </navigation>
