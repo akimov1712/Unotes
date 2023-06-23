@@ -15,7 +15,7 @@
         android:gravity="center"
         android:text="@string/information"
         android:textColor="@color/secondary_color"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -33,6 +33,7 @@
 
         <ImageView
             android:id="@+id/iv_avatar"
+            android:contentDescription="@string/photo_profile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="20dp"
@@ -49,7 +50,7 @@
         android:gravity="center"
         android:text="@string/photo_profile"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/til_proffesion"
         app:layout_constraintEnd_toEndOf="@+id/til_proffesion"
         app:layout_constraintStart_toStartOf="@+id/til_proffesion" />

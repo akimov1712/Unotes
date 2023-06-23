@@ -191,7 +191,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_audio"
+        android:layout_marginHorizontal="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_audio" />
@@ -208,7 +210,7 @@
     <ImageButton
         android:id="@+id/btn_up"
         android:layout_width="25dp"
-        android:layout_height="16dp"
+        android:layout_height="20dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/icon_up"
         app:layout_constraintBottom_toBottomOf="@+id/pBar_popular"
