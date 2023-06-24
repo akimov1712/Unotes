@@ -30,4 +30,5 @@
     <string name="most_speake_notes">Обсуждаемые заметки</string>
     <string name="report">Пожаловаться</string>
     <string name="type_report">Тип нарушения</string>
+    <string name="Note">Заметка</string>
 </resources>

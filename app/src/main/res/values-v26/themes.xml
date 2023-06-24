@@ -108,4 +108,9 @@
         <item name="android:valueFrom">0</item>
     </style>
 
+    <style name="UNotes.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/ssp_regular</item>
+    </style>
+
 </resources>

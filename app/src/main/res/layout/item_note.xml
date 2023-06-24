@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_border"
     android:elevation="1dp"
-    android:layout_margin="16dp"
     android:paddingBottom="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -144,7 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="9dp"
         android:fontFamily="@font/ssp_regular"
-        android:text="Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче....."
+        android:text="Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще Посмотреть все"
         android:textColor="@color/main_color"
         android:textSize="13sp"
         android:layout_marginHorizontal="16dp"
@@ -165,11 +164,14 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_text_note" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_media"
+        android:id="@+id/rv_media_video"
         android:orientation="horizontal"
         android:layout_width="0dp"
+        android:layout_marginHorizontal="2dp"
         android:layout_height="250dp"
         android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_media_slider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_invest" />
@@ -184,13 +186,13 @@
         android:textSize="13sp"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="@+id/tv_text_note"
-        app:layout_constraintTop_toBottomOf="@+id/rv_media" />
+        app:layout_constraintTop_toBottomOf="@+id/rv_media_video" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_audio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        tools:itemCount="3"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_audio"
         android:layout_marginHorizontal="16dp"

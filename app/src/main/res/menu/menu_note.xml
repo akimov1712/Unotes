@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_user"
+        android:icon="@drawable/icon_user"
+        android:iconTint="@color/secondary_color"
+        android:title="Пользователь"/>
+
+    <item
+        android:id="@+id/menu_report"
+        android:icon="@drawable/icon_password"
+        android:iconTint="@color/secondary_color"
+        android:title="Пожаловаться"/>
+
+</menu>
