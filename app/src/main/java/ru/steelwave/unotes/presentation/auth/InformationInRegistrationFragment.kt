@@ -1,4 +1,4 @@
-package ru.steelwave.unotes.presentation.splash
+package ru.steelwave.unotes.presentation.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater

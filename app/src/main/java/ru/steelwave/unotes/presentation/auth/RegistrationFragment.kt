@@ -1,4 +1,4 @@
-package ru.steelwave.unotes.presentation.splash
+package ru.steelwave.unotes.presentation.auth
 
 import android.content.Intent
 import android.net.Uri
@@ -8,15 +8,14 @@ import android.text.SpannableString
 import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import ru.steelwave.unotes.Const
 import ru.steelwave.unotes.R
 import ru.steelwave.unotes.databinding.FragmentRegistrationBinding
-import ru.steelwave.unotes.presentation.RegistrationFragmentDirections
 
 class RegistrationFragment : Fragment() {
 
@@ -26,7 +25,7 @@ class RegistrationFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
         return binding.root
@@ -75,11 +74,21 @@ class RegistrationFragment : Fragment() {
 
         val personalDataStartIndex = fullText.indexOf(personalDataText)
         val personalDataEndIndex = personalDataStartIndex + personalDataText.length
-        spannableString.setSpan(personalDataClickableSpan, personalDataStartIndex, personalDataEndIndex, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannableString.setSpan(
+            personalDataClickableSpan,
+            personalDataStartIndex,
+            personalDataEndIndex,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
 
         val privacyPolicyStartIndex = fullText.indexOf(privacyPolicyText)
         val privacyPolicyEndIndex = privacyPolicyStartIndex + privacyPolicyText.length
-        spannableString.setSpan(privacyPolicyClickableSpan, privacyPolicyStartIndex, privacyPolicyEndIndex, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannableString.setSpan(
+            privacyPolicyClickableSpan,
+            privacyPolicyStartIndex,
+            privacyPolicyEndIndex,
+            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        )
 
         binding.tvRules.text = spannableString
         binding.tvRules.movementMethod = LinkMovementMethod.getInstance()

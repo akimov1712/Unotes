@@ -48,6 +48,7 @@
             android:text="Ubisoft"
             android:textColor="@color/main_color"
             android:textSize="14sp"
+            android:layout_marginStart="5dp"
             app:layout_constraintBottom_toTopOf="@+id/tv_proffesion"
             app:layout_constraintStart_toEndOf="@+id/iv_avatar"
             app:layout_constraintTop_toTopOf="parent"
@@ -62,7 +63,7 @@
             android:textColor="@color/secondary_color"
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+            app:layout_constraintStart_toStartOf="@+id/tv_username"
             app:layout_constraintTop_toBottomOf="@+id/tv_username" />
 
         <ImageButton
@@ -70,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:background="none"
+            android:background="@color/white"
             android:src="@drawable/icon_menu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -228,7 +229,7 @@
         android:text="Популярность:"
         android:textColor="@color/main_color"
         android:textSize="11sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_up"
+        app:layout_constraintStart_toStartOf="@+id/pBar_popular"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <ProgressBar

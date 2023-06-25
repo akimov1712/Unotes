@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.main.NotebookFragment">
+    tools:context=".presentation.main.CategoryFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
@@ -29,11 +29,11 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TextView
-        android:id="@+id/tv_notebook"
+        android:id="@+id/tv_popular_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ssp_regular"
-        android:text="Мой блокнот"
+        android:text="Популярные категории"
         android:textColor="@color/main_color"
         android:textSize="20sp"
         android:layout_marginTop="20dp"
@@ -42,13 +42,36 @@
         app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_notes_in_category"
-        android:layout_width="0dp"
+        android:id="@+id/rv_category_slider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_category_slider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_popular_category" />
+
+    <TextView
+        android:id="@+id/tv_notebook"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/ssp_regular"
+        android:text="Популярные категории"
+        android:textColor="@color/main_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_category_slider" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
-        tools:listitem="@layout/item_note"
+        tools:listitem="@layout/item_category"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,8 +88,8 @@
         android:textColor="@color/hint_color"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/rv_notes_in_category"
-        app:layout_constraintStart_toStartOf="@+id/rv_notes_in_category"
-        app:layout_constraintTop_toBottomOf="@+id/rv_notes_in_category" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_category" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

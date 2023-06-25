@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:defaultNavHost="true"
-    app:navGraph="@navigation/splash_navigation"
-    android:id="@+id/container_splash"
-    android:name="androidx.navigation.fragment.NavHostFragment"
-    tools:context=".presentation.splash.SplashActivity"/>
+    tools:context=".presentation.SplashActivity">
+
+</androidx.constraintlayout.widget.ConstraintLayout>

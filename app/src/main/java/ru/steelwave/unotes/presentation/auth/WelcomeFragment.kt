@@ -1,4 +1,4 @@
-package ru.steelwave.unotes.presentation.splash
+package ru.steelwave.unotes.presentation.auth
 
 import android.os.Bundle
 import android.text.Spannable
@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import ru.steelwave.unotes.R
 import ru.steelwave.unotes.databinding.FragmentWelcomeBinding
-import ru.steelwave.unotes.presentation.WelcomeFragmentDirections
 
 
 class WelcomeFragment : Fragment() {
@@ -22,7 +21,7 @@ class WelcomeFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         _binding = FragmentWelcomeBinding.inflate(inflater, container, false)
         return binding.root

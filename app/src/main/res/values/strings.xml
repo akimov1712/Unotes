@@ -31,4 +31,5 @@
     <string name="report">Пожаловаться</string>
     <string name="type_report">Тип нарушения</string>
     <string name="Note">Заметка</string>
+    <string name="notes_in">Заметки - </string>
 </resources>

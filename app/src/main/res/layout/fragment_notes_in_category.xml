@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.main.NotebookFragment">
+    tools:context=".presentation.main.NotesInCategoryFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
@@ -29,17 +29,29 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <TextView
-        android:id="@+id/tv_notebook"
+        android:id="@+id/tv_notes_in_category"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ssp_regular"
-        android:text="Мой блокнот"
+        android:text="@string/notes_in"
         android:textColor="@color/main_color"
         android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ssp_regular"
+        android:text="Кулинария"
+        android:textColor="@color/secondary_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_notes_in_category"
+        app:layout_constraintStart_toEndOf="@+id/tv_notes_in_category"
+        app:layout_constraintTop_toTopOf="@+id/tv_notes_in_category" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_notes_in_category"
@@ -52,7 +64,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_notebook" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_notes_in_category" />
 
     <TextView
         android:id="@+id/tv_end"
