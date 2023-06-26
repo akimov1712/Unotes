@@ -32,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        app:startIconDrawable="@drawable/icon_user">
+        app:startIconDrawable="@drawable/icon_profile">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_login"

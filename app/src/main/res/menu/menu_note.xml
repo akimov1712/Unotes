@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_user"
-        android:icon="@drawable/icon_user"
+        android:id="@+id/menu_main"
+        android:icon="@drawable/icon_home"
         android:iconTint="@color/secondary_color"
-        android:title="Пользователь"/>
+        android:title="Главная"/>
 
     <item
-        android:id="@+id/menu_report"
-        android:icon="@drawable/icon_password"
+        android:id="@+id/menu_notebook"
+        android:icon="@drawable/icon_notebook"
         android:iconTint="@color/secondary_color"
-        android:title="Пожаловаться"/>
+        android:title="Блокнот"/>
+
+    <item
+        android:id="@+id/menu_write_note"
+        android:icon="@drawable/icon_write_note"
+        android:iconTint="@color/secondary_color"
+        android:title="Написать пост"/>
+
+    <item
+        android:id="@+id/menu_category"
+        android:icon="@drawable/icon_category"
+        android:iconTint="@color/secondary_color"
+        android:title="Категории"/>
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/icon_profile"
+        android:iconTint="@color/secondary_color"
+        android:title="Аккаунт"/>
 
 </menu>
