@@ -6,24 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ru.steelwave.unotes.R
-import ru.steelwave.unotes.databinding.FragmentNotesInCategoryBinding
+import ru.steelwave.unotes.databinding.FragmentHomeBinding
 
 
-class NotesInCategoryFragment : Fragment() {
+class HomeFragment : Fragment() {
 
-    private var _binding: FragmentNotesInCategoryBinding? = null
-    private val binding: FragmentNotesInCategoryBinding
-    get() = _binding ?: throw RuntimeException("FragmentNotesInCategoryBinding == null")
+    private var _binding: FragmentHomeBinding? = null
+    private val binding: FragmentHomeBinding
+    get() = _binding ?: throw RuntimeException("FragmentHomeBinding == null")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        _binding = FragmentNotesInCategoryBinding.inflate(inflater, container, false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
-
-
 
     override fun onDestroyView() {
         super.onDestroyView()

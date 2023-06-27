@@ -16,5 +16,6 @@
     <color name="admin_panel_color">#57CC99</color>
     <color name="hint_color">#33001219</color>
     <color name="color_date">#33001219</color>
+    <color name="color_disactive_button_bottom_menu">#99E63946</color>
 
 </resources>

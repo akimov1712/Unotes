@@ -19,7 +19,7 @@ class NotebookFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-       _binding = FragmentNotebookBinding.inflate(layoutInflater)
+       _binding = FragmentNotebookBinding.inflate(inflater, container, false)
         return binding.root
     }
 

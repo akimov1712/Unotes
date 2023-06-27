@@ -18,11 +18,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/iv_avatar"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_marginStart="13dp"
+            app:riv_corner_radius="10dp"
             android:src="@drawable/image_avatar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -67,6 +68,8 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_username" />
 
         <ImageView
+            android:id="@+id/btn_edit_profile"
+            style="@style/RippleEffect"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:background="@color/white"
@@ -89,6 +92,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/btn_profile"
+        style="@style/RippleEffect"
         android:layout_width="0dp"
         android:layout_marginTop="11dp"
         android:paddingVertical="5dp"
@@ -102,7 +106,7 @@
             android:id="@+id/iv_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_profile"
+            android:src="@drawable/icon_user"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -124,6 +128,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/btn_notebook"
+        style="@style/RippleEffect"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingHorizontal="13dp"
@@ -158,6 +163,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/btn_category"
+        style="@style/RippleEffect"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingHorizontal="13dp"
@@ -192,6 +198,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/btn_write_note"
+        style="@style/RippleEffect"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingHorizontal="13dp"
@@ -235,6 +242,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/btn_logout"
+        style="@style/RippleEffect"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingHorizontal="13dp"
@@ -267,5 +275,17 @@
             app:layout_constraintTop_toTopOf="@+id/iv_logout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/btn_close_modal"
+        style="@style/RippleEffect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:src="@drawable/icon_close"
+        android:padding="10dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,12 +40,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/iv_avatar"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="13dp"
                 android:src="@drawable/image_avatar"
+                app:riv_corner_radius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -362,10 +363,11 @@
         app:layout_constraintStart_toStartOf="@+id/view_status_46_60"
         app:layout_constraintTop_toBottomOf="@+id/view_status_46_60" />
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/iv_avatar_status_user"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        app:riv_corner_radius="10dp"
         android:layout_marginBottom="5dp"
         android:src="@drawable/image_avatar"
         app:layout_constraintBottom_toTopOf="@+id/view_status_1_15"
@@ -488,7 +490,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="3dp"
             android:backgroundTint="@color/white"
-            android:src="@drawable/icon_about_open"
+            android:src="@drawable/icon_open"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

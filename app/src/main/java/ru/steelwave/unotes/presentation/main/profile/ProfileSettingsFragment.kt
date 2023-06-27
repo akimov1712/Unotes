@@ -19,7 +19,7 @@ class ProfileSettingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        _binding = FragmentProfileSettingsBinding.inflate(layoutInflater)
+        _binding = FragmentProfileSettingsBinding.inflate(inflater, container, false)
         return binding.root
     }
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ru.steelwave.unotes.presentation.main.HomeFragment"
+        android:label="Главная"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="ru.steelwave.unotes.presentation.main.CategoryFragment"
+        android:label="Категории"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/notebookFragment"
+        android:name="ru.steelwave.unotes.presentation.main.NotebookFragment"
+        android:label="Блокнот"
+        tools:layout="@layout/fragment_notebook" />
+    <fragment
+        android:id="@+id/detailNoteFragment"
+        android:name="ru.steelwave.unotes.presentation.main.DetailNoteFragment"
+        android:label="Написать пост"
+        tools:layout="@layout/fragment_detail_note" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ru.steelwave.unotes.presentation.main.profile.ProfileFragment"
+        android:label="Профиль"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

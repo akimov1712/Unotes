@@ -19,7 +19,7 @@ class DetailNoteFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        _binding = FragmentDetailNoteBinding.inflate(layoutInflater)
+        _binding = FragmentDetailNoteBinding.inflate(inflater, container, false)
         return binding.root
     }
 

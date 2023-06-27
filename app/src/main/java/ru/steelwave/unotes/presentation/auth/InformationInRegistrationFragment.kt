@@ -18,7 +18,7 @@ class InformationInRegistrationFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentInformationInRegistrationBinding.inflate(inflater)
+        _binding = FragmentInformationInRegistrationBinding.inflate(inflater, container, false)
         return binding.root
     }
 

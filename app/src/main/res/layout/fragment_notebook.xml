@@ -6,28 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.main.NotebookFragment">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="?actionBarSize"
-        android:background="@color/white"
-        android:elevation="4dp"
-        app:navigationIcon="@drawable/icon_bird_left"
-        app:title="@string/Note"
-        app:titleTextAppearance="@style/UNotes.Toolbar.Title"
-        app:titleCentered="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <View
-        android:id="@+id/view2"
-        style="@style/SeparateLine"
-        android:layout_marginHorizontal="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
     <TextView
         android:id="@+id/tv_notebook"
         android:layout_width="wrap_content"
@@ -39,7 +17,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_notes_in_category"
