@@ -6,28 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".presentation.main.profile.ProfileFragment">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="?actionBarSize"
-        android:background="@color/white"
-        android:elevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/icon_bird_left"
-        app:title="@string/Note"
-        app:titleCentered="true"
-        app:titleTextAppearance="@style/UNotes.Toolbar.Title" />
-
-    <View
-        android:id="@+id/view2"
-        style="@style/SeparateLine"
-        android:layout_marginHorizontal="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar"
-        app:layout_constraintStart_toStartOf="@+id/toolbar"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_show_notes"
         style="@style/button_fill"
@@ -39,7 +17,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_my_data"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_my_data"

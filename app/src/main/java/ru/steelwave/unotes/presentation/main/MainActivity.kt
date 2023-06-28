@@ -2,14 +2,12 @@ package ru.steelwave.unotes.presentation.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import ru.steelwave.unotes.R
 import ru.steelwave.unotes.databinding.ActivityMainBinding
-import ru.steelwave.unotes.presentation.main.profile.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +20,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(findViewById(R.id.toolbar))
         navigationBottomMenu()
+        setupModalMainMenu()
+    }
+
+    private fun setupModalMainMenu() {
+        val customMenu = CustomMenu(this, binding.ivToogleOpenOrCloseMenu)
+        binding.btnOpenMenuToolbar.setOnClickListener {
+            val state = customMenu.isShowing()
+            if (!state){
+                binding.ivToogleOpenOrCloseMenu.setImageDrawable(getDrawable(R.drawable.icon_close))
+                customMenu.showMenu(it)
+            } else{
+                binding.ivToogleOpenOrCloseMenu.setImageDrawable(getDrawable(R.drawable.icon_open))
+                customMenu.hideMenu()
+            }
+        }
     }
 
     private fun navigationBottomMenu() {
@@ -32,7 +45,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.notebookFragment,
                 R.id.detailNoteFragment,
                 R.id.categoryFragment,
-                R.id.profileFragment)
+                R.id.profileFragment
+            )
         )
         setupActionBarWithNavController(navController, appBarConfigurator)
         binding.bottomMenu.setupWithNavController(navController)

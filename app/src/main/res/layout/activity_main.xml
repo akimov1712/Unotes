@@ -80,8 +80,8 @@
 
             <ImageView
                 android:id="@+id/iv_toogle_open_or_close_menu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="10dp"
+                android:layout_height="6dp"
                 android:src="@drawable/icon_open"
                 android:layout_marginStart="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
