@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
+    private val customMenu by lazy{
+        PopupMenu(this, binding.ivToogleOpenOrCloseMenu)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +27,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupModalMainMenu() {
-        val customMenu = CustomMenu(this, binding.ivToogleOpenOrCloseMenu)
         binding.btnOpenMenuToolbar.setOnClickListener {
             val state = customMenu.isShowing()
             if (!state){
@@ -52,4 +54,11 @@ class MainActivity : AppCompatActivity() {
         binding.bottomMenu.setupWithNavController(navController)
     }
 
+    override fun onBackPressed() {
+        if (customMenu.isShowing()) {
+            customMenu.hideMenu()
+        } else {
+            super.onBackPressed()
+        }
+    }
 }

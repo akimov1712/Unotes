@@ -44,7 +44,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_show_notes"
+            android:id="@+id/btn_toogle_information"
             style="@style/button_fill"
             android:layout_width="0dp"
             android:layout_height="43dp"

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_navigation"
+    app:startDestination="@id/profileInformationFragment">
+
+    <fragment
+        android:id="@+id/profileActionFragment"
+        android:name="ru.steelwave.unotes.presentation.main.profile.ProfileActionFragment"
+        android:label="fragment_profile_action"
+        tools:layout="@layout/fragment_profile_action" />
+    <fragment
+        android:id="@+id/profileInformationFragment"
+        android:name="ru.steelwave.unotes.presentation.main.profile.ProfileInformationFragment"
+        android:label="fragment_profile_information"
+        tools:layout="@layout/fragment_profile_information" />
+    <fragment
+        android:id="@+id/profileSettingsFragment"
+        android:name="ru.steelwave.unotes.presentation.main.profile.ProfileSettingsFragment"
+        android:label="fragment_profile_settings"
+        tools:layout="@layout/fragment_profile_settings" />
+</navigation>

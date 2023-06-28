@@ -7,30 +7,30 @@
     tools:context=".presentation.main.profile.ProfileFragment">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_show_notes"
+        android:id="@+id/btn_information"
         style="@style/button_fill"
         android:layout_width="0dp"
         android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:text="Общая информация"
-        app:layout_constraintEnd_toStartOf="@+id/btn_my_data"
+        app:layout_constraintEnd_toStartOf="@+id/btn_my_settings"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_my_data"
+        android:id="@+id/btn_my_settings"
         style="@style/button_empty"
         android:layout_width="0dp"
         android:layout_height="43dp"
         android:layout_marginHorizontal="16dp"
         android:text="Мои данные"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_show_notes"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_information"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_show_notes"
-        app:layout_constraintTop_toTopOf="@+id/btn_show_notes" />
+        app:layout_constraintStart_toEndOf="@+id/btn_information"
+        app:layout_constraintTop_toTopOf="@+id/btn_information" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_action"
@@ -40,20 +40,22 @@
         android:layout_marginHorizontal="16dp"
         android:text="Действие"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_show_notes"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_information"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_show_notes"
-        app:layout_constraintTop_toTopOf="@+id/btn_show_notes" />
+        app:layout_constraintStart_toEndOf="@+id/btn_information"
+        app:layout_constraintTop_toTopOf="@+id/btn_information" />
 
-    <FrameLayout
+    <fragment
         android:id="@+id/container_profile_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_show_notes" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_information"
+        app:navGraph="@navigation/profile_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

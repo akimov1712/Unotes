@@ -3,17 +3,15 @@ package ru.steelwave.unotes.presentation.main
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import ru.steelwave.unotes.R
-import ru.steelwave.unotes.databinding.ModalMainMenuBinding
 
-class CustomMenu(context: Context,
-                 private val iconImageView: ImageView,
-                 attrs: AttributeSet? = null,
-                 defStyleAttr: Int = 0
+class PopupMenu(context: Context,
+                private val iconImageView: ImageView,
+                attrs: AttributeSet? = null,
+                defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
     private var popupWindow: PopupWindow
