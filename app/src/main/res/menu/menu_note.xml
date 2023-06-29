@@ -13,8 +13,8 @@
     <item
         android:id="@+id/detailNoteFragment"
         android:icon="@drawable/icon_write_note"
-        android:tooltipText="Написать пост"
-        android:title="Написать пост"/>
+        android:tooltipText="Создать"
+        android:title="Создать"/>
 
     <item
         android:id="@+id/categoryFragment"

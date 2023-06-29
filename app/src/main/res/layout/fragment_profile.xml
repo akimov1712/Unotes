@@ -1,52 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.main.profile.ProfileFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.main.profile.ProfileFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_information"
-        style="@style/button_fill"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
         android:layout_width="0dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Общая информация"
-        app:layout_constraintEnd_toStartOf="@+id/btn_my_settings"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_height="wrap_content"
+        app:tabIndicator="@drawable/background_tab_indicator"
+        app:tabIndicatorColor="@color/secondary_color"
+        app:tabTextColor="@color/secondary_color"
+        app:tabRippleColor="@color/secondary_color"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_my_settings"
-        style="@style/button_empty"
-        android:layout_width="0dp"
-        android:layout_height="43dp"
-        android:layout_marginHorizontal="16dp"
-        android:text="Мои данные"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_information"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_information"
-        app:layout_constraintTop_toTopOf="@+id/btn_information" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_action"
-        style="@style/button_empty"
-        android:layout_width="0dp"
-        android:layout_height="43dp"
-        android:layout_marginHorizontal="16dp"
-        android:text="Действие"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_information"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_information"
-        app:layout_constraintTop_toTopOf="@+id/btn_information" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Общая информация"/>
 
-    <fragment
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Мои данные"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container_profile_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
@@ -55,7 +39,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_information"
+        app:layout_constraintTop_toBottomOf="@+id/tablayout"
         app:navGraph="@navigation/profile_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

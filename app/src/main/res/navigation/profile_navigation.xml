@@ -6,18 +6,26 @@
     app:startDestination="@id/profileInformationFragment">
 
     <fragment
-        android:id="@+id/profileActionFragment"
-        android:name="ru.steelwave.unotes.presentation.main.profile.ProfileActionFragment"
-        android:label="fragment_profile_action"
-        tools:layout="@layout/fragment_profile_action" />
-    <fragment
         android:id="@+id/profileInformationFragment"
         android:name="ru.steelwave.unotes.presentation.main.profile.ProfileInformationFragment"
         android:label="fragment_profile_information"
-        tools:layout="@layout/fragment_profile_information" />
+        tools:layout="@layout/fragment_profile_information" >
+        <action
+            android:id="@+id/action_profileInformationFragment_to_profileSettingsFragment"
+            app:destination="@id/profileSettingsFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/profileSettingsFragment"
         android:name="ru.steelwave.unotes.presentation.main.profile.ProfileSettingsFragment"
         android:label="fragment_profile_settings"
         tools:layout="@layout/fragment_profile_settings" />
+
+    <fragment
+        android:id="@+id/profileActionFragment"
+        android:name="ru.steelwave.unotes.presentation.main.profile.ProfileActionFragment"
+        android:label="fragment_profile_action"
+        tools:layout="@layout/fragment_profile_action" />
+
+
 </navigation>

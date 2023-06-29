@@ -14,29 +14,12 @@ class MainActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
-    private val customMenu by lazy{
-        PopupMenu(this, binding.ivToogleOpenOrCloseMenu)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        setSupportActionBar(findViewById(R.id.toolbar))
+        supportActionBar?.hide()
         navigationBottomMenu()
-        setupModalMainMenu()
-    }
-
-    private fun setupModalMainMenu() {
-        binding.btnOpenMenuToolbar.setOnClickListener {
-            val state = customMenu.isShowing()
-            if (!state){
-                binding.ivToogleOpenOrCloseMenu.setImageDrawable(getDrawable(R.drawable.icon_close))
-                customMenu.showMenu(it)
-            } else{
-                binding.ivToogleOpenOrCloseMenu.setImageDrawable(getDrawable(R.drawable.icon_open))
-                customMenu.hideMenu()
-            }
-        }
     }
 
     private fun navigationBottomMenu() {
@@ -54,11 +37,4 @@ class MainActivity : AppCompatActivity() {
         binding.bottomMenu.setupWithNavController(navController)
     }
 
-    override fun onBackPressed() {
-        if (customMenu.isShowing()) {
-            customMenu.hideMenu()
-        } else {
-            super.onBackPressed()
-        }
-    }
 }

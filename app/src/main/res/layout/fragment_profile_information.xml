@@ -4,24 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layout_scrollEffect="none"
+    android:overScrollMode="never"
     tools:context=".presentation.main.profile.ProfileInformationFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/tv_user_note"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/ssp_regular"
-            android:text="Заметка пользователя"
-            android:textColor="@color/main_color"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout4"
@@ -32,7 +21,7 @@
             android:background="@drawable/background_border"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_user_note">
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
@@ -46,8 +35,8 @@
 
                 <com.makeramen.roundedimageview.RoundedImageView
                     android:id="@+id/iv_avatar"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="13dp"
                     android:src="@drawable/image_avatar"
                     app:riv_corner_radius="10dp"
@@ -63,7 +52,7 @@
                     android:fontFamily="@font/ssp_semibold"
                     android:text="21"
                     android:textColor="@color/secondary_color"
-                    android:textSize="10sp"
+                    android:textSize="@dimen/size_small"
                     app:layout_constraintStart_toEndOf="@+id/tv_username"
                     app:layout_constraintTop_toTopOf="@+id/tv_username" />
 
@@ -75,7 +64,7 @@
                     android:fontFamily="@font/ssp_semibold"
                     android:text="Ubisoft"
                     android:textColor="@color/main_color"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/size_middle"
                     app:layout_constraintBottom_toTopOf="@+id/tv_proffesion"
                     app:layout_constraintStart_toEndOf="@+id/iv_avatar"
                     app:layout_constraintTop_toTopOf="parent"
@@ -88,7 +77,7 @@
                     android:fontFamily="@font/ssp_regular"
                     android:text="Game Company"
                     android:textColor="@color/secondary_color"
-                    android:textSize="10sp"
+                    android:textSize="@dimen/size_small"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/tv_username"
                     app:layout_constraintTop_toBottomOf="@+id/tv_username" />
@@ -104,7 +93,7 @@
                 android:fontFamily="@font/ssp_regular"
                 android:text="Дата регистрации: 07 июня, 21:58"
                 android:textColor="@color/color_date"
-                android:textSize="10sp"
+                android:textSize="@dimen/size_small"
                 app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
@@ -116,6 +105,7 @@
                 android:fontFamily="@font/ssp_bold"
                 android:text="Статистика пользователя"
                 android:textColor="@color/main_color"
+                android:textSize="@dimen/size_big"
                 app:layout_constraintStart_toStartOf="@+id/tv_date"
                 app:layout_constraintTop_toBottomOf="@+id/tv_date" />
 
@@ -124,11 +114,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/ssp_regular"
                 android:text="Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще Посмотреть все"
                 android:textColor="@color/main_color"
-                android:textSize="13sp"
+                android:textSize="@dimen/size_normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_Title" />
@@ -159,6 +149,7 @@
                 android:layout_marginStart="5dp"
                 android:fontFamily="@font/ssp_semibold"
                 android:text="22"
+                android:textSize="@dimen/size_middle"
                 android:textColor="@color/secondary_color"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_count_notes"
                 app:layout_constraintStart_toEndOf="@+id/iv_count_notes"
@@ -172,7 +163,7 @@
                 android:fontFamily="@font/ssp_regular"
                 android:text="Популярность пользователя:"
                 android:textColor="@color/main_color"
-                android:textSize="11sp"
+                android:textSize="@dimen/size_default"
                 app:layout_constraintStart_toStartOf="@+id/pBar_popular_user"
                 app:layout_constraintTop_toBottomOf="@+id/view" />
 
@@ -180,12 +171,13 @@
                 android:id="@+id/pBar_popular_user"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="0dp"
-                android:layout_height="17dp"
+                android:maxWidth="280dp"
+                android:layout_height="@dimen/progressBar_height"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/background_border"
-                android:padding="-1dp"
+                android:background="@drawable/background_border_progressbar"
+                android:padding="1dp"
                 android:progress="25"
                 android:progressDrawable="@drawable/background_progressbar"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -200,7 +192,7 @@
                 android:fontFamily="@font/ssp_regular"
                 android:text="25%"
                 android:textColor="@color/main_color"
-                android:textSize="10sp"
+                android:textSize="@dimen/size_small"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/pBar_popular_user"
                 app:layout_constraintEnd_toEndOf="@+id/pBar_popular_user"
@@ -228,6 +220,7 @@
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/ssp_semibold"
                 android:text="22"
+                android:textSize="@dimen/size_middle"
                 android:textColor="@color/secondary_color"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_count_comments"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -238,34 +231,24 @@
 
         <TextView
             android:id="@+id/tv_notes_in_category"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/ssp_regular"
-            android:text="Статус пользователя — "
-            android:textColor="@color/main_color"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
-
-        <TextView
-            android:id="@+id/tv_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:fontFamily="@font/ssp_semibold"
-            android:text="Достоверный источник"
-            android:textColor="@color/secondary_color"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_notes_in_category"
-            app:layout_constraintStart_toEndOf="@+id/tv_notes_in_category"
-            app:layout_constraintTop_toTopOf="@+id/tv_notes_in_category" />
+            android:text="Статус: Достоверный источник"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/size_big"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
 
         <View
             android:id="@+id/view3"
             android:layout_width="0dp"
             android:layout_height="3dp"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="60dp"
             android:background="@drawable/background_gap_line"
             app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
             app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
@@ -290,7 +273,7 @@
             android:fontFamily="@font/ssp_regular"
             android:text="1-15"
             android:textColor="@color/secondary_color"
-            android:textSize="12sp"
+            android:textSize="@dimen/size_default"
             app:layout_constraintEnd_toEndOf="@+id/view_status_1_15"
             app:layout_constraintStart_toStartOf="@+id/view3"
             app:layout_constraintTop_toBottomOf="@+id/view_status_1_15" />
@@ -314,7 +297,7 @@
             android:fontFamily="@font/ssp_regular"
             android:text="16-30"
             android:textColor="@color/secondary_color"
-            android:textSize="12sp"
+            android:textSize="@dimen/size_default"
             app:layout_constraintEnd_toEndOf="@+id/view_status_16_30"
             app:layout_constraintStart_toStartOf="@+id/view_status_16_30"
             app:layout_constraintTop_toBottomOf="@+id/view_status_16_30" />
@@ -338,7 +321,7 @@
             android:fontFamily="@font/ssp_regular"
             android:text="31-45"
             android:textColor="@color/secondary_color"
-            android:textSize="12sp"
+            android:textSize="@dimen/size_default"
             app:layout_constraintEnd_toEndOf="@+id/view_status_31_45"
             app:layout_constraintStart_toStartOf="@+id/view_status_31_45"
             app:layout_constraintTop_toBottomOf="@+id/view_status_31_45" />
@@ -362,15 +345,15 @@
             android:fontFamily="@font/ssp_regular"
             android:text="46-60"
             android:textColor="@color/secondary_color"
-            android:textSize="12sp"
+            android:textSize="@dimen/size_default"
             app:layout_constraintEnd_toEndOf="@+id/view_status_46_60"
             app:layout_constraintStart_toStartOf="@+id/view_status_46_60"
             app:layout_constraintTop_toBottomOf="@+id/view_status_46_60" />
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/iv_avatar_status_user"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             app:riv_corner_radius="10dp"
             android:layout_marginBottom="5dp"
             android:src="@drawable/image_avatar"
@@ -398,7 +381,7 @@
                 android:fontFamily="@font/ssp_semibold"
                 android:text="Об уровнях"
                 android:textColor="@color/secondary_color"
-                android:textSize="16sp"
+                android:textSize="@dimen/size_big"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -429,7 +412,7 @@
                     android:fontFamily="@font/ssp_regular"
                     android:text="Каждый участник сообщества UNotes, имеет уровень активности на сайте, который определяет его статус пользователя. После регистрации, пользователю присваивается уровень - 1 и статус Пользователь, что говорит о новом участнике сайта."
                     android:textColor="@color/main_color"
-                    android:textSize="11sp"
+                    android:textSize="@dimen/size_default"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -442,8 +425,10 @@
                     android:fontFamily="@font/ssp_semibold"
                     android:text="Сколько уровней на сайте и какие есть статусы?"
                     android:textColor="@color/secondary_color"
-                    android:textSize="11sp"
-                    app:layout_constraintStart_toStartOf="@+id/text1"
+                    android:textSize="@dimen/size_middle"
+                    android:layout_marginHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/text1" />
 
                 <TextView
@@ -454,7 +439,7 @@
                     android:fontFamily="@font/ssp_regular"
                     android:text="Пользователь может развить аккаунт до 60 уровня, что говорит об его активности и популярности на сайте."
                     android:textColor="@color/main_color"
-                    android:textSize="11sp"
+                    android:textSize="@dimen/size_default"
                     app:layout_constraintEnd_toEndOf="@+id/text1"
                     app:layout_constraintStart_toStartOf="@+id/text2"
                     app:layout_constraintTop_toBottomOf="@+id/text2" />
@@ -467,8 +452,10 @@
                     android:fontFamily="@font/ssp_semibold"
                     android:text="Как повысить уровень?"
                     android:textColor="@color/secondary_color"
-                    android:textSize="11sp"
-                    app:layout_constraintStart_toStartOf="@+id/text3"
+                    android:textSize="@dimen/size_middle"
+                    android:layout_marginHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/text3" />
 
                 <TextView
@@ -479,7 +466,7 @@
                     android:fontFamily="@font/ssp_regular"
                     android:text="Чтобы увеличить уровень, пользователю сообщества необходимо проявлять активность на сайте, публиковать свои записи, комментировать записи других пользователей, а также увеличивать популярность своих записей."
                     android:textColor="@color/main_color"
-                    android:textSize="11sp"
+                    android:textSize="@dimen/size_default"
                     app:layout_constraintEnd_toEndOf="@+id/text1"
                     app:layout_constraintStart_toStartOf="@+id/text4"
                     app:layout_constraintTop_toBottomOf="@+id/text4" />
@@ -512,11 +499,11 @@
             android:id="@+id/tv_notebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/ssp_regular"
+            android:fontFamily="@font/ssp_semibold"
+            android:textSize="@dimen/size_big"
             android:text="Заметки пользователя"
             android:layout_marginTop="20dp"
             android:textColor="@color/main_color"
-            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/view9"
             app:layout_constraintTop_toBottomOf="@+id/view9" />
 

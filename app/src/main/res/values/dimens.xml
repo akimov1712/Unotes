@@ -4,4 +4,13 @@
     <dimen name="corner_button">15dp</dimen>
     <dimen name="corner_checkbox">2dp</dimen>
 
+    <dimen name="size_small">12sp</dimen>
+    <dimen name="size_default">15sp</dimen>
+    <dimen name="size_normal">16sp</dimen>
+    <dimen name="size_middle">17sp</dimen>
+    <dimen name="size_big">20sp</dimen>
+
+    <dimen name="progressBar_height">22sp</dimen>
+
+
 </resources>

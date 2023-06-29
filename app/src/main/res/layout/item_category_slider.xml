@@ -45,7 +45,7 @@
         android:fontFamily="@font/ssp_regular"
         android:text="Популярность:"
         android:textColor="@color/main_color"
-        android:textSize="11sp"
+        android:textSize="@dimen/size_default"
         app:layout_constraintStart_toStartOf="@+id/tv_category"
         app:layout_constraintTop_toBottomOf="@+id/tv_category" />
 
@@ -53,14 +53,15 @@
         android:id="@+id/pBar_popular"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
-        android:layout_height="17dp"
+        android:layout_height="@dimen/progressBar_height"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="24dp"
-        android:background="@drawable/background_border"
-        android:padding="-1dp"
+        android:background="@drawable/background_border_progressbar"
+        android:padding="1dp"
         android:progress="24"
         android:progressDrawable="@drawable/background_progressbar"
         app:layout_constraintEnd_toStartOf="@+id/tv_notes"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tv_popular"
         app:layout_constraintTop_toBottomOf="@+id/tv_popular" />
 
@@ -71,7 +72,7 @@
         android:fontFamily="@font/ssp_regular"
         android:text="25%"
         android:textColor="@color/main_color"
-        android:textSize="10sp"
+        android:textSize="@dimen/size_small"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/pBar_popular"
         app:layout_constraintEnd_toEndOf="@+id/pBar_popular"
@@ -83,14 +84,14 @@
         android:id="@+id/tv_notes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:fontFamily="@font/ssp_regular"
         android:text="Записей"
         android:textColor="@color/main_color"
-        android:textSize="13sp"
+        android:textSize="@dimen/size_default"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_popular"
         app:layout_constraintEnd_toEndOf="@+id/iv_category"
         app:layout_constraintStart_toStartOf="@+id/iv_category"
-        app:layout_constraintTop_toBottomOf="@+id/iv_category" />
+        app:layout_constraintTop_toTopOf="@+id/tv_popular" />
 
     <TextView
         android:id="@+id/tv_notes_count"
@@ -99,17 +100,17 @@
         android:fontFamily="@font/ssp_semibold"
         android:text="13"
         android:textColor="@color/secondary_color"
-        android:textSize="13sp"
-        android:layout_marginTop="2dp"
+        android:textSize="@dimen/size_default"
+        app:layout_constraintBottom_toBottomOf="@+id/pBar_popular"
         app:layout_constraintEnd_toEndOf="@+id/tv_notes"
         app:layout_constraintStart_toStartOf="@+id/tv_notes"
-        app:layout_constraintTop_toBottomOf="@+id/tv_notes" />
+        app:layout_constraintTop_toTopOf="@+id/pBar_popular" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_read"
         style="@style/button_empty"
         android:layout_width="110dp"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:layout_marginVertical="20dp"
         android:text="Читать"
         app:layout_constraintBottom_toBottomOf="parent"

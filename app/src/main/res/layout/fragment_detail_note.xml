@@ -27,8 +27,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
-                android:layout_width="170dp"
-                android:layout_height="56dp"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
                 android:layout_margin="16dp"
                 android:background="@drawable/background_border"
                 android:elevation="2dp"
@@ -37,8 +37,8 @@
 
                 <com.makeramen.roundedimageview.RoundedImageView
                     android:id="@+id/iv_avatar"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="13dp"
                     app:riv_corner_radius="10dp"
                     android:src="@drawable/image_avatar"
@@ -54,7 +54,7 @@
                     android:fontFamily="@font/ssp_semibold"
                     android:text="21"
                     android:textColor="@color/secondary_color"
-                    android:textSize="10sp"
+                    android:textSize="@dimen/size_small"
                     app:layout_constraintStart_toEndOf="@+id/tv_username"
                     app:layout_constraintTop_toTopOf="@+id/tv_username" />
 
@@ -65,7 +65,7 @@
                     android:fontFamily="@font/ssp_semibold"
                     android:text="Ubisoft"
                     android:textColor="@color/main_color"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/size_middle"
                     android:layout_marginStart="5dp"
                     app:layout_constraintBottom_toTopOf="@+id/tv_proffesion"
                     app:layout_constraintStart_toEndOf="@+id/iv_avatar"
@@ -79,15 +79,15 @@
                     android:fontFamily="@font/ssp_regular"
                     android:text="Game Company"
                     android:textColor="@color/secondary_color"
-                    android:textSize="10sp"
+                    android:textSize="@dimen/size_small"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/tv_username"
                     app:layout_constraintTop_toBottomOf="@+id/tv_username" />
 
                 <ImageButton
                     android:id="@+id/bnt_menu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_marginEnd="8dp"
                     android:background="@color/white"
                     android:src="@drawable/icon_menu"
@@ -99,8 +99,8 @@
 
             <TextView
                 android:id="@+id/tv_badge_count_comments"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:background="@drawable/background_badge"
                 android:gravity="center"
                 android:text=""
@@ -113,8 +113,8 @@
 
             <ImageView
                 android:id="@+id/iv_comments"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_marginEnd="30dp"
                 android:background="@drawable/icon_comments"
                 app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
@@ -129,20 +129,22 @@
                 android:fontFamily="@font/ssp_regular"
                 android:text="Сегодня, 15:32"
                 android:textColor="@color/color_date"
-                android:textSize="10sp"
+                android:textSize="@dimen/size_small"
                 app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
             <TextView
                 android:id="@+id/tv_Title"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:textSize="16sp"
+                android:layout_marginHorizontal="16dp"
                 android:fontFamily="@font/ssp_bold"
                 android:text="Что ждет серию Far Cry в будущем"
                 android:textColor="@color/main_color"
-                app:layout_constraintStart_toStartOf="@+id/tv_date"
+                android:textSize="@dimen/size_big"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_date" />
 
             <TextView
@@ -153,7 +155,7 @@
                 android:fontFamily="@font/ssp_regular"
                 android:text="Игровая индустрия"
                 android:textColor="@color/secondary_color"
-                android:textSize="9sp"
+                android:textSize="@dimen/size_small"
                 app:layout_constraintStart_toStartOf="@+id/tv_Title"
                 app:layout_constraintTop_toBottomOf="@+id/tv_Title" />
 
@@ -166,7 +168,7 @@
                 android:fontFamily="@font/ssp_regular"
                 android:text="Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это еще круче.....Этот текст конечно крутой, но стоит сказать, что его написание это ещe"
                 android:textColor="@color/main_color"
-                android:textSize="15sp"
+                android:textSize="@dimen/size_normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_theme_note" />
@@ -178,8 +180,8 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/ssp_bold"
                 android:text="Видео"
-                android:textColor="@color/main_color"
-                android:textSize="18sp"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/size_middle"
                 app:layout_constraintStart_toStartOf="@+id/tv_text_note"
                 app:layout_constraintTop_toBottomOf="@+id/tv_text_note" />
 
@@ -203,8 +205,8 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/ssp_bold"
                 android:text="Фото"
-                android:textColor="@color/main_color"
-                android:textSize="18sp"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/size_middle"
                 app:layout_constraintStart_toStartOf="@+id/tv_text_note"
                 app:layout_constraintTop_toBottomOf="@+id/rv_media_video" />
 
@@ -228,8 +230,8 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/ssp_bold"
                 android:text="Аудио"
-                android:textColor="@color/main_color"
-                android:textSize="18sp"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/size_middle"
                 app:layout_constraintStart_toStartOf="@+id/tv_text_note"
                 app:layout_constraintTop_toBottomOf="@+id/rv_media_image" />
 
@@ -272,7 +274,7 @@
                 android:fontFamily="@font/ssp_regular"
                 android:text="Популярность:"
                 android:textColor="@color/main_color"
-                android:textSize="11sp"
+                android:textSize="@dimen/size_default"
                 app:layout_constraintStart_toEndOf="@+id/btn_up"
                 app:layout_constraintTop_toBottomOf="@+id/view" />
 
@@ -280,11 +282,12 @@
                 android:id="@+id/pBar_popular"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="0dp"
-                android:layout_height="17dp"
+                android:maxWidth="280dp"
+                android:layout_height="@dimen/progressBar_height"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="3dp"
-                android:background="@drawable/background_border"
-                android:padding="-1dp"
+                android:background="@drawable/background_border_progressbar"
+                android:padding="1dp"
                 android:progress="24"
                 android:progressDrawable="@drawable/background_progressbar"
                 app:layout_constraintEnd_toStartOf="@+id/btn_down"
@@ -298,7 +301,7 @@
                 android:fontFamily="@font/ssp_regular"
                 android:text="25%"
                 android:textColor="@color/main_color"
-                android:textSize="10sp"
+                android:textSize="@dimen/size_small"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/pBar_popular"
                 app:layout_constraintEnd_toEndOf="@+id/pBar_popular"

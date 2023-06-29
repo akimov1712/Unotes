@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/ssp_regular"
         android:text="ДОРА ДУРА.mp3"
-        android:textSize="12sp"
+        android:textSize="@dimen/size_default"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:textColor="@color/main_color"
@@ -52,7 +52,7 @@
         android:fontFamily="@font/ssp_regular"
         android:text="/3:02"
         android:textColor="#80001219"
-        android:textSize="12sp"
+        android:textSize="@dimen/size_default"
         app:layout_constraintEnd_toEndOf="@+id/seekBar"
         app:layout_constraintTop_toTopOf="@+id/btn_toggle_audio" />
 
@@ -64,7 +64,7 @@
         android:fontFamily="@font/ssp_regular"
         android:text="1:52"
         android:textColor="@color/main_color"
-        android:textSize="12sp"
+        android:textSize="@dimen/size_default"
         app:layout_constraintEnd_toStartOf="@+id/tv_all_seconds_audio"
         app:layout_constraintTop_toTopOf="@+id/btn_toggle_audio" />
 

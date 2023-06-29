@@ -18,8 +18,8 @@
             android:layout_marginTop="20dp"
             android:text="Популярные авторы"
             android:textColor="@color/main_color"
-            android:fontFamily="@font/ssp_regular"
-            android:textSize="16sp"
+            android:fontFamily="@font/ssp_semibold"
+            android:textSize="@dimen/size_big"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,10 +41,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="25dp"
-            android:fontFamily="@font/ssp_regular"
             android:text="Новые заметки"
             android:textColor="@color/main_color"
-            android:textSize="16sp"
+            android:fontFamily="@font/ssp_semibold"
+            android:textSize="@dimen/size_big"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rv_popular_auhors" />
 
@@ -82,10 +82,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/ssp_regular"
+            android:fontFamily="@font/ssp_semibold"
+            android:textSize="@dimen/size_big"
             android:text="Популярные заметки"
             android:textColor="@color/main_color"
-            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_new_notes_more" />
 
@@ -123,10 +123,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/ssp_regular"
+            android:fontFamily="@font/ssp_semibold"
+            android:textSize="@dimen/size_big"
             android:text="Обсуждаемые заметки"
             android:textColor="@color/main_color"
-            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_popular_notes_more" />
 
