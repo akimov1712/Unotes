@@ -27,4 +27,11 @@ class ProfileSettingsFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    companion object{
+        fun getInstance():Fragment{
+            return ProfileSettingsFragment()
+        }
+    }
+
 }

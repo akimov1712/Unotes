@@ -26,4 +26,11 @@ class ProfileActionFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    companion object{
+        fun getInstance():Fragment{
+            return ProfileActionFragment()
+        }
+    }
+
 }
