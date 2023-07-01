@@ -16,12 +16,12 @@
         android:layout_marginBottom="75dp"
         android:textColor="@color/secondary_color"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/til_proffesion"
+        app:layout_constraintBottom_toTopOf="@+id/til_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_proffesion"
+        android:id="@+id/til_login"
         style="@style/TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
             style="@style/EditTextInTIL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_password"
+            android:hint="@string/confirm_password"
             android:inputType="textPassword"
             android:maxLength="25" />
 

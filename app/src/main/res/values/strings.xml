@@ -32,4 +32,5 @@
     <string name="type_report">Тип нарушения</string>
     <string name="Note">Заметка</string>
     <string name="notes_in">Заметки - </string>
+    <string name="confirm_password">Подтвердите пароль</string>
 </resources>

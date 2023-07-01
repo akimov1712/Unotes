@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     app:layout_scrollEffect="none"
     android:overScrollMode="never"
+    android:scrollbars="none"
     tools:context=".presentation.main.profile.ProfileInformationFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -229,18 +230,32 @@
 
 
         <TextView
-            android:id="@+id/tv_notes_in_category"
-            android:layout_width="0dp"
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/ssp_semibold"
-            android:text="Статус: Достоверный источник"
+            android:text="Статус:"
             android:textColor="@color/main_color"
             android:textSize="@dimen/size_big"
-            android:layout_marginHorizontal="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/ssp_semibold"
+            android:text="Достоверный источник"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/size_big"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
 
         <View
             android:id="@+id/view3"
@@ -251,7 +266,7 @@
             android:background="@drawable/background_gap_line"
             app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
             app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
-            app:layout_constraintTop_toBottomOf="@+id/tv_notes_in_category" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <View
             android:id="@+id/view_status_1_15"

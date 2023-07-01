@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="ru.steelwave.unotes.presentation.main.HomeFragment"
+        android:name="ru.steelwave.unotes.presentation.main.home.HomeFragment"
         android:label="Главная"
         tools:layout="@layout/fragment_home" />
     <fragment
