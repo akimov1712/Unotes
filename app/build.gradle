@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace 'ru.steelwave.unotes'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "ru.steelwave.unotes"
