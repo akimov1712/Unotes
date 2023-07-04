@@ -40,6 +40,10 @@ android {
 
 dependencies {
     def nav_version = "2.5.3"
+    def retrofit_version = "2.9.0"
+
+//    Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
 
 //    Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
